@@ -6,7 +6,7 @@ interface BioParagraphProps {
 export const bioParagraphs: BioParagraphProps[] = [
   {
     id: 1,
-    text: "Hello! My name is Dustin and I enjoy creating things that live on the internet. My interest in web development started back in 2013 when I decided to go to Bryant & Stratton. From the moment I produced 'Hello World' in the console of my first app, I knew I was hooked into the world of Web Development.",
+    text: 'Hello! My name is Dustin and I enjoy creating things that live on the internet. My interest in web development started back in 2013 when I decided to go to Bryant & Stratton. From the moment I produced "Hello World" in the console of my first app, I knew I was hooked into the world of Web Development.',
   },
   {
     id: 2,
