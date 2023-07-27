@@ -13,7 +13,8 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+
+    formState: { errors, isSubmitting, isSubmitted },
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   });
@@ -40,7 +41,8 @@ const Contact = () => {
   }, [controls, inView]);
 
   const onSubmit = async () => {
-    await recaptchaRef!.current!.executeAsync();
+    const token = await recaptchaRef!.current!.executeAsync();
+    debugger;
     // send form data using emailjs
     try {
       await emailjs.sendForm(
@@ -106,6 +108,7 @@ const Contact = () => {
               id='name'
               type='text'
               placeholder='Name'
+              required
               {...register("name")}
             />
             {errors.name && (
@@ -117,7 +120,8 @@ const Contact = () => {
             <input
               className='contact-input'
               type='text'
-              placeholder='Email'
+              placeholder='Email'  
+              required
               {...register("email")}
             />
             {errors.email && (
@@ -131,6 +135,7 @@ const Contact = () => {
               className='contact-input'
               rows={6}
               placeholder='Message'
+              required
               {...register("message")}
             ></textarea>
             {errors.message && (
