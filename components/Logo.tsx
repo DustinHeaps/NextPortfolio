@@ -13,7 +13,7 @@ const Logo = () => {
       className='-ml-[6px]'
     >
       <Link onClick={handleScroll} href='#home'>
-        <Image src={logo} alt='logo' className='w-20 rounded-full' />
+        <Image src={logo} alt='logo' priority={true} className='w-20 rounded-full' />
       </Link>
     </motion.div>
   );

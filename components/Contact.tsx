@@ -1,17 +1,25 @@
 import { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
-const Email = `https://formspree.io/f/${process.env.NEXT_PUBLIC_EMAIL_ID}`;
+import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "react-toastify";
+import ReCAPTCHA from "react-google-recaptcha";
+import { formSchema, FormSchemaType } from "@/models/Form";
+import ReactLoading from "react-loading";
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<FormSchemaType>({
+    resolver: zodResolver(formSchema),
+  });
+
   const formRef = useRef<HTMLFormElement | null>(null);
-  useEffect(() => {
-    // Clear the form after success
-    for (const form of document.getElementsByTagName("form")) {
-      form.reset();
-    }
-  }, []);
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
   const controls = useAnimation();
 
@@ -30,6 +38,23 @@ const Contact = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
+
+  const onSubmit = async () => {
+    await recaptchaRef!.current!.executeAsync();
+    // send form data using emailjs
+    try {
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        formRef.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+      );
+      toast.success("Email sent successfully");
+      formRef.current?.reset();
+    } catch (error) {
+      console.error(`Error sending email: ${(error as Error).message}`);
+    }
+  };
 
   return (
     <section
@@ -61,53 +86,80 @@ const Contact = () => {
             y: 20,
             opacity: 0,
           }}
-          action={Email}
-          method='POST'
+          onSubmit={handleSubmit(onSubmit)}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ type: "tween", ease: "easeOut", duration: 1 }}
           ref={formRef}
           className='flex flex-col bg-transparent gap-4 mx-auto max-w-2xl text-gray-300 caret-primary focus:caret-primary max-w-[600px]'
         >
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size='invisible'
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+          />
+
           <div className='flex flex-col gap-1'>
             <label className='label-styles'>Name</label>
             <input
               className='contact-input'
+              id='name'
               type='text'
               placeholder='Name'
-              name='name'
-              required
+              {...register("name")}
             />
+            {errors.name && (
+              <span className='text-red-800'>{errors.name?.message}</span>
+            )}
           </div>
           <div className='flex flex-col gap-1'>
             <label className='label-styles'>Email</label>
             <input
               className='contact-input'
-              type='email'
+              type='text'
               placeholder='Email'
-              name='email'
-              required
+              {...register("email")}
             />
+            {errors.email && (
+              <span className='text-red-800'>{errors.email?.message}</span>
+            )}
           </div>
+
           <div className='flex flex-col gap-1'>
             <label className='label-styles'>Message</label>
             <textarea
               className='contact-input'
               rows={6}
               placeholder='Message'
-              name='message'
-              required
+              {...register("message")}
             ></textarea>
+            {errors.message && (
+              <span className='text-red-800'>{errors.message?.message}</span>
+            )}
           </div>
-          <div className='text-center'>
+          <div className='flex items-center justify-center'>
             <motion.button
+              disabled={isSubmitting}
               initial='hidden'
               animate={controls}
               variants={animationVariants}
               transition={{ duration: 1.0, delay: 0.4 }}
-              className='btn-get-in-touch'
+              className='btn-get-in-touch text-base flex items-center justify-center'
             >
-              Submit
+              {!isSubmitting ? (
+                "Submit"
+              ) : (
+                <>
+                  <ReactLoading
+                    type={"spin"}
+                    color={"#64ffda"}
+                    height={25}
+                    width={25}
+                    className='mr-3'
+                  />
+                  <span> Submitting...</span>
+                </>
+              )}
             </motion.button>
           </div>
         </motion.form>
