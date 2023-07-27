@@ -27,7 +27,7 @@ export const projects: ProjectProps[] = [
   {
     id: 2,
     title: "Airbnb Clone",
-    image: "/assets/images/airbnb.png",
+    image: "/assets/images/Airbnb.png",
     description: `A fullstack application that allows users to easily manage their listings and bookings. Guests can book properties directly through the app. Guests also can easily find properties that meet their needs using the advanced search engine.`,
     technologies: [
       "Next.JS 13",
