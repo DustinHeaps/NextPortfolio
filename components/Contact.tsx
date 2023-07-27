@@ -8,9 +8,10 @@ const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   useEffect(() => {
     // Clear the form after success
-    formRef && formRef.current && formRef.current.reset();
+    for (const form of document.getElementsByTagName("form")) {
+      form.reset();
+    }
   }, []);
-
 
   const controls = useAnimation();
 
