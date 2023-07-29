@@ -22,9 +22,9 @@ const Hero = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className='text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col'
       >
-        Dustin Heaps,
+        Dustin Heaps.
         <span className='text-textDark mt-2 lgl:mt-4'>
-          Bringer of life to your website.
+        I never get tired of building.
         </span>
       </motion.h1>
       <motion.p

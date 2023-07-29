@@ -9,6 +9,7 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Testimonioals from "@/components/Testimonials";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       </Head>
       <main className='w-full h-screen bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll scrollbar-thin scrollbar-track-bodyColor/20 scrollbar-thumb-textDark font-bodyFont'>
         <Navbar />
+
         <div className='w-full h-[88vh] xl:flex items-center gap-20 justify-between'>
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -38,7 +40,7 @@ export default function Home() {
           >
             <LeftSide />
           </motion.div>
-          <div className='h-[88vh] w-full mx-auto p-4'>
+          <div className='h-[88vh] w-full mx-auto py-4'>
             <Banner />
             <About />
             <Experience />
@@ -46,7 +48,7 @@ export default function Home() {
             <Projects />
             <Testimonioals />
             <Contact />
-   
+            <Footer />
           </div>
         </div>
       </main>
