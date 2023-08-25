@@ -5,7 +5,6 @@ import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-toastify";
-import ReCAPTCHA from "react-google-recaptcha";
 import { formSchema, FormSchemaType } from "@/models/Form";
 import ReactLoading from "react-loading";
 
@@ -20,7 +19,7 @@ const Contact = () => {
   });
 
   const formRef = useRef<HTMLFormElement | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+
 
   const controls = useAnimation();
 
@@ -41,8 +40,6 @@ const Contact = () => {
   }, [controls, inView]);
 
   const onSubmit = async () => {
-    const token = await recaptchaRef!.current!.executeAsync();
-    debugger;
     // send form data using emailjs
     try {
       await emailjs.sendForm(
@@ -95,11 +92,7 @@ const Contact = () => {
           ref={formRef}
           className='flex flex-col bg-transparent gap-4 mx-auto max-w-2xl text-gray-300 caret-primary focus:caret-primary max-w-[600px]'
         >
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            size='invisible'
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
-          />
+    
 
           <div className='flex flex-col gap-1'>
             <label className='label-styles'>Name</label>

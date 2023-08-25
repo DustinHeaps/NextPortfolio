@@ -21,7 +21,6 @@
     "next": "13.4.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.45.2",
     "react-icons": "^4.9.0",
     "react-intersection-observer": "^9.4.4",
@@ -32,7 +31,6 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@types/react-google-recaptcha": "^2.1.5",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "tailwind-scrollbar": "^3.0.4",
