@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-toastify";
+
 import { formSchema, FormSchemaType } from "@/models/Form";
 import ReactLoading from "react-loading";
 
@@ -40,7 +41,7 @@ const Contact = () => {
   }, [controls, inView]);
 
   const onSubmit = async () => {
-    // send form data using emailjs
+    
     try {
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
