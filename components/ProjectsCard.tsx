@@ -43,7 +43,7 @@ const ProjectsCard = ({ project }: ProjectCardProps) => {
           </h3>
         </div>
         <div className='lg:w-[115%] flex lg:flex-end p-4 bg-[#112240] rounded-md'>
-          <p className='text-paragraph'>{description}</p>
+          <p className='text-paragraph leading-6 '>{description}</p>
         </div>
 
         <ul className='text-xs md:text-sm font-linkFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark'>

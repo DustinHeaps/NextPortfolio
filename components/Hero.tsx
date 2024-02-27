@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { handleScroll } from "@/utils";
-import { heroText } from '@/constants';
+import { heroText } from "@/constants";
 
 const Hero = () => {
   return (
@@ -24,14 +24,14 @@ const Hero = () => {
       >
         Dustin Heaps.
         <span className='text-textDark mt-2 lgl:mt-4'>
-        I never get tired of building.
+          I never get tired of building.
         </span>
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className='text-paragraph md:max-w-[650px]'
+        className='text-paragraph leading-6 md:max-w-[750px]'
       >
         {heroText}
       </motion.p>

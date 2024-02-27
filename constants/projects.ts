@@ -11,6 +11,36 @@ export interface ProjectProps {
 export const projects: ProjectProps[] = [
   {
     id: 1,
+    title: "DevOverflow",
+    image: "/assets/images/devoverflow.png",
+    description: `An open forum dedicated to creating the ultimate compendium of programming queries and solutions. This collaborative venue serves as a hub for solving technical puzzles, contributed to and utilized by a global community. It ranks among the world's most frequented digital destinations for developers and tech enthusiasts`,
+    technologies: [
+      "NextJs 13",
+      "TypeScript",
+      "Tailwind CSS",
+      "Clerk",
+      "MongoDB",
+    ],
+    projectLink: "https://dev-overflow-beta.vercel.app/",
+    githubLink: "https://github.com/DustinHeaps/DevOverflow",
+  },
+  {
+    id: 2,
+    title: "Vacations.com",
+    image: "/assets/images/vacations.png",
+    description: `Discover the perfect blend of comfort, convenience, and adventure with Vacations.com, the premier online destination for hotel bookings that transforms every trip into an unforgettable experience. Whether you're planning a serene getaway, a business trip, or a thrilling adventure, our extensive collection of accommodations ensures you find the perfect stay that caters to your every need.`,
+    technologies: [
+      "NextJs 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "Next-Auth",
+      "Stripe",
+    ],
+    projectLink: "https://booking-app-ten-blush.vercel.app/",
+    githubLink: "https://github.com/DustinHeaps/BookingApp",
+  },
+  {
+    id: 3,
     title: "Cafe",
     image: "/assets/images/cafe.png",
     description: `Cafe is an Ecommerce app built with Next.JS 13 and using Swell for the management of products. Users can order a variety of options including subscriptions, standard box, bulk bags, as well as select coffee equipment.`,
@@ -23,30 +53,5 @@ export const projects: ProjectProps[] = [
     ],
     projectLink: "https://cafe-dustinheaps.vercel.app",
     githubLink: "https://github.com/DustinHeaps/Cafe",
-  },
-  {
-    id: 2,
-    title: "Airbnb Clone",
-    image: "/assets/images/Airbnb.png",
-    description: `A fullstack application that allows users to easily manage their listings and bookings. Guests can book properties directly through the app. Guests also can easily find properties that meet their needs using the advanced search engine.`,
-    technologies: [
-      "Next.JS 13",
-      "Prisma",
-      "TypeScript",
-      "Tailwind CSS",
-      "MongoDB",
-    ],
-    projectLink: "https://airbnb-clone-dustinheaps.vercel.app",
-    githubLink: "https://github.com/DustinHeaps/AirbnbClone",
-  },
-
-  {
-    id: 3,
-    title: "The Pizza Co.",
-    image: "/assets/images/pizza.png",
-    description: `This react app allows guests to easily order pizza. Simply choose your pizza and put in your information and an option to make the order a priority. Use the search orders function to see how far away the pizza is.`,
-    technologies: ["React", "Redux Toolkit", "TypeScript", "Tailwind CSS"],
-    projectLink: "https://react-pizza-app-dustinheaps.vercel.app",
-    githubLink: "https://github.com/DustinHeaps/PizzaApp",
   },
 ];
