@@ -12,10 +12,10 @@ export const experiences: ExperienceProps[] = [
     companyName: "TxMQ, Inc.",
     title: "UI Developer",
     points: [
-      "Skillfully designed and developed user-centric interfaces utilizing a sophisticated tech stack that includes HTML, CSS, React, Redux, TypeScript, and Angular. My efforts led to marked enhancements in user engagement and satisfaction, demonstrating a keen eye for aesthetic appeal and functional design.",
-      "Played a pivotal role in team collaboration, effectively liaising between customers and the development team. Spearheaded the creation and prioritization of tasks derived from comprehensive requirements documentation and feature designs, ensuring a smooth and efficient workflow.",
-      "Orchestrated the design and architecture of new features in close coordination with backend developers. This collaboration was instrumental in achieving seamless functionality and integration across platforms, contributing to a cohesive and intuitive user experience.",
-      "Conducted in-depth testing and debugging processes, focusing on UI component functionality. This meticulous approach significantly reduced software bugs and propelled application performance, highlighting a dedication to quality and excellence in software development.",
+      "Successfully reduced page load time by 25% and bolstered website performance by optimizing coding practices with Angular, React and TypeScript, leading to smoother site navigation and reduced waiting times for users",
+      "Improved customer satisfaction ratings by 40%, as evidenced by customer feedback, by ensuring development tasks closely aligned with customer expectations and feature designs, leading to higher satisfaction with final products",
+      "Reduced bug reports by 30% related to newly introduced features by ensuring thorough design and architecture planning in collaboration with backend development teams, leading to a more stable and reliable application",
+      "Improved application performance metrics by 40%, as evidenced by faster response times and increased stability, achieved through a focused approach to UI testing, which led to a smoother user experience",
     ],
 
     dates: "August 2019 - July 2023",
