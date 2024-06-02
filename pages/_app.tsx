@@ -7,6 +7,7 @@ import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 if (typeof window !== "undefined") {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
@@ -34,7 +35,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <PostHogProvider client={posthog}>
         <Component {...pageProps} />
+        <Script src='https://scripts.simpleanalyticscdn.com/latest.js' />
       </PostHogProvider>
+      <ToastContainer />
     </>
   );
 }

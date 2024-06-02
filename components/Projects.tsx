@@ -9,7 +9,7 @@ const Projects = () => {
       className='wrapper-sm'
     >
       <SectionTitle title='Some things I have built' titleNo='03' />
-      <div className='w-full flex flex-col items-center justify-center gap-28 mt-10'>
+      <div id='efrfr' className='w-full flex flex-col items-center justify-center gap-28 mt-10'>
         {projects.map((project) => {
           return <ProjectsCard key={project.id} project={project} />;
         })}
