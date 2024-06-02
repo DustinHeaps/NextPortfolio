@@ -28,7 +28,7 @@ const ProjectsCard = ({ project }: ProjectCardProps) => {
             className='w-full h-full'
             alt={`${title} Image`}
           />
-          <div className=' opacity-0 lg:opacity-100 absolute w-full h-full bg-textGreen/40 top-0 left-0 group-hover:bg-transparent duration-300'></div>
+          <div className=' opacity-0 lg:opacity-100 absolute w-full h-full top-0 left-0  duration-300'></div>
         </div>
       </a>
       <div className=' w-full xl:w-1/2 flex flex-col items-start gap-6 lgl:justify-between lg:items-end  z-10'>
