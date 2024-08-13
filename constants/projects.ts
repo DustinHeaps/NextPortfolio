@@ -15,7 +15,7 @@ export const projects: ProjectProps[] = [
     image: "/assets/images/buildr.png",
     description: `This modern website builder app revolutionizes web development by combining an intuitive drag-and-drop interface with robust design tools, making it easy for anyone to create stunning websites without any coding knowledge. In addition to powerful website creation capabilities, the app features an integrated Kanban board, providing a seamless project management experience.`,
     technologies: [
-      "Next.JS 14",
+      "NextJS 14",
       "Stripe",
       "TypeScript",
       "Tailwind CSS",

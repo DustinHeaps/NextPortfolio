@@ -14,7 +14,7 @@ export const skills: SkillsProps[] = [
   },
   {
     id: 3,
-    name: "Next.JS 14",
+    name: "NextJS 15",
   },
   {
     id: 4,
