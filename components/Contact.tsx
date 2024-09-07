@@ -16,7 +16,7 @@ const Contact = () => {
     register,
     handleSubmit,
 
-    formState: { errors, isSubmitting, isSubmitted },
+    formState: { errors, isSubmitting },
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   });

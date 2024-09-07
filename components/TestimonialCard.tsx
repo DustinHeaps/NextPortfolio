@@ -1,7 +1,4 @@
-import { FaGithubSquare } from "react-icons/fa";
-import { MdOutlineOpenInNew } from "react-icons/md";
 import { motion } from "framer-motion";
-import { RxDotFilled } from "react-icons/rx";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { TestimonialProps } from "@/constants/testimonials";
 

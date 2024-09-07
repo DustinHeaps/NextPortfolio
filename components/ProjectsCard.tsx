@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaGlobe } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { MdOutlineOpenInNew } from "react-icons/md";
 
 interface ProjectCardProps {
