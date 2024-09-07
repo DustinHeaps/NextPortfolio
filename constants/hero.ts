@@ -1,0 +1,2 @@
+export const heroText: string =
+  "As a Web Developer with 5 years of experience, I specialize in front-end development using React and TypeScript, while also possessing strong back-end skills with NextJS. This full-stack proficiency allows me to contribute significantly to complex projects and collaborate across development teams. My passion for technology drives continuous learning, ensuring my work is innovative and aligned with the latest industry standards.";
