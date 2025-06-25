@@ -10,7 +10,7 @@ export const bioParagraphs: BioParagraphProps[] = [
   },
   {
     id: 2,
-    text: "Fast forward to today, for 5 years I've had the priviledge of getting valuable experience working at TxMQ, Inc. learning the ins and outs of the industry. My goal is to always build applications that are scalable and efficient under the hood while providing engaging user experiences.",
+    text: "Fast forward to today, for 5+ years I've had the priviledge of getting valuable experience working at TxMQ, Inc. learning the ins and outs of the industry. My goal is to always build applications that are scalable and efficient under the hood while providing engaging user experiences.",
   },
 ];
 

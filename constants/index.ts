@@ -7,7 +7,7 @@ import { navLinks } from "./navLinks";
 import { testimonials } from "./testimonials";
 
 export const resumeLink: string =
- "https://drive.google.com/file/d/1K7AvmzS0pk7Vsw4FzbRKxPYRtlg5ky7g/view?usp=drive_link";
+ "https://drive.google.com/file/d/1qnL3_BMrOS7Da3mexUkFYE_nPmrjhvuI/view?usp=sharing";
 
 export const gmailLink: string = "dustinheaps89@gmail.com";
 
