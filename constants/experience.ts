@@ -20,6 +20,6 @@ export const experiences: ExperienceProps[] = [
 
     ],
 
-    dates: "August 2019 - July 2024",
+    dates: "August 2019 - Present",
   },
 ];
