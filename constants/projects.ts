@@ -26,21 +26,6 @@ export const projects: ProjectProps[] = [
   },
   {
     id: 2,
-    title: "Buildr",
-    image: "/assets/images/buildr.png",
-    description: `This modern website builder app revolutionizes web development by combining an intuitive drag-and-drop interface with robust design tools, making it easy for anyone to create stunning websites without any coding knowledge. In addition to powerful website creation capabilities, the app features an integrated Kanban board, providing a seamless project management experience.`,
-    technologies: [
-      "NextJS 14",
-      "Stripe",
-      "TypeScript",
-      "Tailwind CSS",
-      "Clerk",
-    ],
-    projectLink: "https://buildr-dustinheaps.vercel.app/",
-    githubLink: "https://github.com/DustinHeaps/Buildr",
-  },
-  {
-    id: 3,
     title: "DevOverflow",
     image: "/assets/images/devoverflow.png",
     description: `An open forum dedicated to creating the ultimate compendium of programming queries and solutions. This collaborative venue serves as a hub for solving technical puzzles, contributed to and utilized by a global community. It ranks among the world's most frequented digital destinations for developers and tech enthusiasts`,
@@ -53,6 +38,21 @@ export const projects: ProjectProps[] = [
     ],
     projectLink: "https://dev-overflow-beta.vercel.app/",
     githubLink: "https://github.com/DustinHeaps/DevOverflow",
+  },
+  {
+    id: 3,
+    title: "Buildr",
+    image: "/assets/images/buildr.png",
+    description: `This modern website builder app revolutionizes web development by combining an intuitive drag-and-drop interface with robust design tools, making it easy for anyone to create stunning websites without any coding knowledge. In addition to powerful website creation capabilities, the app features an integrated Kanban board, providing a seamless project management experience.`,
+    technologies: [
+      "NextJS 14",
+      "Stripe",
+      "TypeScript",
+      "Tailwind CSS",
+      "Clerk",
+    ],
+    projectLink: "https://buildr-dustinheaps.vercel.app/",
+    githubLink: "https://github.com/DustinHeaps/Buildr",
   },
   // {
   //   id: 3,
