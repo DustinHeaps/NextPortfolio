@@ -67,8 +67,9 @@ const Experience = () => {
                 </li>
               </>
             </ul>
-
+                 
             {workTxMQ && <ExperienceItem item={experience} />}
+            
           </motion.div>
         );
       })}

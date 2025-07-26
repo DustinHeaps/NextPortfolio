@@ -34,6 +34,14 @@ export const skills: SkillsProps[] = [
   },
   {
     id: 8,
-    name: "Express.JS",
+    name: "Prisma",
+  },
+  {
+    id: 9,
+    name: "Clerk",
+  },
+  {
+    id: 10,
+    name: "REST/GraphQL",
   },
 ];

@@ -10,7 +10,7 @@ const About = () => {
       <SectionTitle title='About me' titleNo='01' />
       <div className='flex flex-col mdl:flex-row gap-16'>
         <div className='w-full lgl:w-2/3 text-base text-textDark font-medium flex flex-col'>
-          <div className='[&>*:first-child]:mb-4'>
+        <div className='[&>*:not(:last-child)]:mb-4'>
             {bioParagraphs.map((paragraph) => (
               <p key={paragraph.id}>
                 {paragraph.text}

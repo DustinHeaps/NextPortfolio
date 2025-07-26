@@ -14,7 +14,7 @@ const Hero = () => {
         transition={{ duration: 0.5, delay: 0.6 }}
         className='text-lg font-titleFont tracking-wide text-textGreen'
       >
-        Hi, my name is
+        {/* Hi, my name is */}
       </motion.span>
       <motion.h1
         initial={{ opacity: 0 }}
@@ -22,9 +22,9 @@ const Hero = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className='text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col'
       >
-        Dustin Heaps.
+        👋 Hi, I’m Dustin Heaps.
         <span className='text-textDark mt-2 lgl:mt-4'>
-          I never get tired of building.
+        I build fast, modern web apps — and never stop shipping.
         </span>
       </motion.h1>
       <motion.p
@@ -43,7 +43,7 @@ const Hero = () => {
         transition={{ duration: 0.5, delay: 0.9 }}
         className='btn-get-in-touch flex items-center justify-center cursor-pointer'
       >
-        Get in touch
+       Let’s Work Together
       </motion.a>
     </section>
   );

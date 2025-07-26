@@ -1,9 +1,9 @@
-import { ExperienceProps } from '@/constants/experience';
+import { ExperienceProps } from "@/constants/experience";
 import { motion } from "framer-motion";
 import { RxDoubleArrowRight } from "react-icons/rx";
 
 interface ExperienceItemProps {
-    item: ExperienceProps
+  item: ExperienceProps;
 }
 
 const ExperienceItem = ({ item }: ExperienceItemProps) => {
@@ -21,6 +21,10 @@ const ExperienceItem = ({ item }: ExperienceItemProps) => {
         <span className='text-textGreen tracking-wide'>@{companyName}</span>
       </h3>
       <p className='text-sm my-2 font-medium text-textDark'>{dates}</p>
+      <p className='mt-2 text-sm'>
+        Leading UI efforts on enterprise web apps — with a focus on performance,
+        accessibility, and modern tooling.
+      </p>
       <ul className='mt-5 flex flex-col'>
         {points.map((point) => {
           return (

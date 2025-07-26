@@ -12,11 +12,13 @@ export const experiences: ExperienceProps[] = [
     companyName: "TxMQ, Inc.",
     title: "UI Developer",
     points: [
-      "Developed dynamic, responsive web applications using ReactJS and AngularJS, enhancing UI and UX to improve customer satisfaction.",
-      "Conducted thorough testing and debugging to optimize performance, leading to a 30% increase in site speed and user experience.",
-      "Spearheaded the migration of legacy codebases to modern JavaScript frameworks, improving application scalability and maintainability.",
-      "Implemented automated testing using Jest and Playwright, reducing production bugs by 50%.",
-      "Enhanced SEO and accessibility standards, resulting in a 25% increase in organic traffic."
+      "Developed fast, responsive web applications using React.js and AngularJS – improving UI/UX and customer satisfaction.",
+      "Built internal tools and dashboards to streamline business operations and data visibility.",
+      "Migrated legacy apps to modern React/TypeScript stacks, improving performance and maintainability.",
+      "Led SEO and accessibility improvements, resulting in a 25% boost in organic traffic and better Lighthouse scores.",
+      "Integrated testing workflows using Jest and Playwright, reducing production bugs by 50%.",
+      "Collaborated cross-functionally to deliver scalable web solutions aligned with business goals.",
+      "Introduced SaaS-style components (auth, file uploads, dashboards) into internal apps using modern tools like Clerk and UploadThing."
 
     ],
 
